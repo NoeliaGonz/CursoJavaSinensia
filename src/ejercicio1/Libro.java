@@ -1,30 +1,40 @@
 package ejercicio1;
 
-public class Libro {
-    private String nombre;
-    private String anio;
+public abstract class Libro {
+    private String nombreAutor;
+    private String titulo;
+    private int anio;
+    private Editorial editorial;
 
-    public Libro(String nombre, String anio) {
-        this.nombre = nombre;
+    public Libro(String nombreAutor, String titulo, int anio) {
+        this.nombreAutor = nombreAutor;
+        this.titulo = titulo;
         this.anio = anio;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreAutor() {
+        return nombreAutor;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreAutor(String nombreAutor) {
+        this.nombreAutor = nombreAutor;
     }
 
-    public String getAnio() {
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public int getAnio() {
         return anio;
     }
 
-    public void setAnio(String anio) {
+    public void setAnio(int anio) {
         this.anio = anio;
     }
-    public void leyendo(){
-        System.out.println("Se está leyendo el libro");
-    }
+
+    public abstract void mostrarInformacion();
 }
