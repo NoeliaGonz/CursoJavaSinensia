@@ -17,13 +17,6 @@ public class Main {
         lLibros.add(libro2);
         lLibros.add(libro3);
 
-        for (Libro l: lLibros){
-            if(l instanceof AptoLeer){
-                AptoLeer aptoLeer= (AptoLeer) l;
-                System.out.println("¿El libro es apto para todas las edades?" + l.getTitulo() + aptoLeer.esApto(Publico.NINIOS));
-            }
-        }
-
         System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------");
         libro1.mostrarInformacion();
         libro2.mostrarInformacion();
@@ -31,11 +24,22 @@ public class Main {
         libro3.confirmarMisterio();
 
         System.out.println("................................................................................................................................................");
+       /*
+       //Primera forma que pensé para probar mi interfaz
         System.out.println("¿Son estos libros aptos para diferentes publicos?");
         System.out.println("Es apto para todas las edades el libro " + libro2.getTitulo() + ":" + libro2.esApto(Publico.valueOf(String.valueOf(Publico.TODOS_PUBLICOS))));
         System.out.println("¿Es apto para niños? El libro  " + libro1.getTitulo()+ " :" + libro1.esApto(Publico.valueOf(String.valueOf(Publico.JOVENES))));
         System.out.println("¿Es apto para jóvenes? El libro: " + libro3.getTitulo() + " :" + libro3.esApto(Publico.valueOf(String.valueOf(Publico.NINIOS))));
+        */
+        System.out.println("¿Son aptos todos los libros para ese grupo de edad?");
+        for (Libro l: lLibros){
+            if(l instanceof AptoLeer){
+                AptoLeer aptoLeer= (AptoLeer) l;
+                System.out.println("Libro: " + l.getTitulo() + aptoLeer.esApto(Publico.NINIOS));
+            }
+        }
         System.out.println("................................................................................................................................................");
+
 
         System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------");
     }
