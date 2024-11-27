@@ -1,15 +1,16 @@
 package ejercicio1;
 
-public abstract class Libro {
+public sealed abstract class Libro permits Ficcion, Romantica, Negra {
     private String nombreAutor;
     private String titulo;
     private int anio;
     private Editorial editorial;
 
-    public Libro(String nombreAutor, String titulo, int anio) {
+    public Libro(String nombreAutor, String titulo, int anio, Editorial editorial) {
         this.nombreAutor = nombreAutor;
         this.titulo = titulo;
         this.anio = anio;
+        this.editorial= editorial;
     }
 
     public String getNombreAutor() {
@@ -34,6 +35,14 @@ public abstract class Libro {
 
     public void setAnio(int anio) {
         this.anio = anio;
+    }
+
+    public Editorial getEditorial() {
+        return editorial;
+    }
+
+    public void setEditorial(Editorial editorial) {
+        this.editorial = editorial;
     }
 
     public abstract void mostrarInformacion();

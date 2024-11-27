@@ -1,5 +1,5 @@
 package ejercicio1;
 
 public interface AptoLeer {
-    boolean esApto(String publico);
+    boolean esApto(Publico publico);
 }

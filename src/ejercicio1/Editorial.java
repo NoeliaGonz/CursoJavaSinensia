@@ -24,4 +24,11 @@ public class Editorial {
     public void setPais(String pais) {
         this.pais = pais;
     }
+
+    @Override
+    public String toString() {
+        return ". Editorial: " +
+                 nombre +
+                ", Pais: " + pais ;
+    }
 }
