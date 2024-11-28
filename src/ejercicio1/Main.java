@@ -7,7 +7,7 @@ public class Main {
         Editorial ed1= new Editorial("Planeta", "Espania");
         Editorial ed2 = new Editorial("Penguin", "Estados Unidos");
 
-        Romantica libro1= new Romantica("Maria Dueñas ", "El tiempo entre costuras ", 2012, " Alto", ed1);
+        Romantica libro1= new Romantica("Maria Dueñas ", "El tiempo entre costuras ", 2012, Emocion.ALTO, ed1);
         Ficcion libro2 = new Ficcion("Brandon Sanderson ", "Mistborn ", 2006, "Fantástica-apocaliptica ", ed2);
         Negra libro3 = new Negra("Juan Gomez Jurado ","Todo muere ", 2024, true, ed1);
 

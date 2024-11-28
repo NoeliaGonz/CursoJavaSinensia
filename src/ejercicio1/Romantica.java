@@ -7,7 +7,7 @@ package ejercicio1;
  * @version 1.0
  */
 public final class Romantica extends Libro implements AptoLeer{
-    private String nivelEmocion;
+    private Emocion nivelEmocion;
     /**
      * Constructor que crea un libro romántico con los detalles proporcionados.
      *
@@ -17,7 +17,7 @@ public final class Romantica extends Libro implements AptoLeer{
      * @param nivelEmocion El nivel de emoción de la novela romántica.
      * @param editorial La editorial que publicó el libro.
      */
-    public Romantica(String nombreAutor, String titulo, int anio, String nivelEmocion,Editorial editorial) {
+    public Romantica(String nombreAutor, String titulo, int anio, Emocion nivelEmocion,Editorial editorial) {
         super(nombreAutor, titulo, anio,editorial);
         this.nivelEmocion=nivelEmocion;
     }
